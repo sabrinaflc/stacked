@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>MENU | STACKED</title>
 </head>
+
 <body>
-    <h1>Hello world</h1>
+
+    <div id='preloader'></div>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/STACKED.png" alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#combos">COMBOS</a></li>
+                <li><a href="#artesanais">ARTESANAIS</a></li>
+                <li><a href="#acompanhamentos">ACOMPANHAMENTOS</a></li>
+                <li><a href="#bebidas">BEBIDAS</a></li>
+                <li><a href="#sobremesas">SOBREMESAS</a></li>
+            </ul>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </nav>
+        <div class="cart-icon">🛒</div>
+    </header>
+    
+    <main>
+        <div class="highlight"></div>
+    </main>
+
+    <script>
+        function closepreloader(){
+            document.getElementById("preloader").style.display = 'none';
+        }
+        window.addEventListener("load",function(){
+            setTimeout(closepreloader, 2000);
+            
+        });
+    
+    </script>
+
 </body>
+
 </html>
