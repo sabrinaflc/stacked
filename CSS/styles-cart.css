@@ -84,7 +84,7 @@ nav ul li a {
 }
 
 #preloader{
-    background: #ffffff url(assets/burger-loader.gif) no-repeat center center; /* Image source: Pavel Maček */
+    background: #ffffff url('../assets/burger-loader.gif') no-repeat center center; /* Image source: Pavel Maček */
     background-size: 55%;
     height: 100vh;
     width: 100%;
