@@ -72,10 +72,14 @@ nav ul li a {
     justify-content: center;
 } */
 
-.highlight {
+#c:hover,
+#a:hover,
+#ac:hover,
+#b:hover,
+#s:hover{
     width: 80%;
     height: 300px;
-    background-color: #E57200;
+    color: #E57200;
     border-radius: 20px;
 }
 
