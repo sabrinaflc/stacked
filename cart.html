@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/styles-cart.css">
     <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
@@ -12,7 +13,7 @@
 
 <body>
 
-    <!-- <div id='preloader'></div> -->
+    <div id='preloader'></div>
 
     <header>
         <a href="index.html" class="logo">
@@ -36,7 +37,12 @@
         <div class="cart-icon">🛒</div>
     </header>
     
-    <br><h1>CARRINHO</h1>
+    <br><h1 class="title">CARRINHO</h1>
+
+    <div class="container">
+        <button id="button"></button>
+    </div>
+
     <main>
         <div class="highlight"></div>
     </main>
