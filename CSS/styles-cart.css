@@ -20,6 +20,14 @@ body {
     align-items: center;
 }
 
+p{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    font-style: normal;
+    color: #1e1e1e;
+}
+
 .title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -168,4 +176,81 @@ button#button.validate:after {
     to {
         transform: rotate(360deg);
     }
+}
+
+/* Estilos para a tabela do carrinho */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 24px;
+  color: #1ECD97;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #E57200; /* Cor laranja do título */
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Linhas alternadas para melhor legibilidade */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover nas linhas */
+tbody tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilizar o botão Remover dentro da tabela */
+.btn-remove {
+  padding: 5px 10px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+  background-color: #cc0000;
+}
+
+/* Estilizar a linha de total */
+tbody tr:last-child {
+
+  background-color: #1ECD97; /* Cor verde do botão */
+  color: white;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }

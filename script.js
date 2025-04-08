@@ -77,7 +77,7 @@ function displayCartItems() {
     container.innerHTML = '';
 
     if (cartItems.length === 0) {
-        container.innerHTML = '<p>O carrinho está vazio</p>';
+        container.innerHTML = '<h2>O carrinho está vazio, adicione um item primeiro</h2>';
         return;
     }
 
@@ -88,8 +88,7 @@ function displayCartItems() {
                 <th>Item</th>
                 <th>Quantidade</th>
                 <th>Preço Unitário</th>
-                <th>Total</th>
-                <th>Ação</th>
+                <th>                                 </th>
             </tr>
         </thead>
         <tbody>
@@ -105,13 +104,12 @@ function displayCartItems() {
             <td>${item.name}</td>
             <td>${item.quantity}</td>
             <td>R$ ${item.price.toFixed(2).replace('.', ',')}</td>
-            <td>R$ ${item.total.toFixed(2).replace('.', ',')}</td>
             <td><button class="btn-remove" data-index="${index}">Remover</button></td>
         `;
         tbody.appendChild(row);
         grandTotal += item.total;
     });
-
+    
     const totalRow = document.createElement('tr');
     totalRow.innerHTML = `
         <td colspan="3">Total</td>
@@ -156,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('.title')?.textContent === 'CARRINHO') {
+    if (document.querySelector('.title')?.textContent === 'PEDIDO') {
         displayCartItems();
         setupFinalizeButton();
     }
