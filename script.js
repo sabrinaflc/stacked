@@ -18,23 +18,28 @@ window.addEventListener("load",function(){
 
 // Botão finalizar carrinho
 $(function () {
-  $("#button").click(function () {
-    var $btn = $(this);
-
-    // Adiciona a classe de carregamento (rotação)
-    $btn.addClass("onclic");
-
-    // Após 2.25s, troca para validação
-    setTimeout(function () {
-      $btn.removeClass("onclic");
-      $btn.addClass("validate");
-
-      // Após 2.25s, volta ao estado original
+    $("#button").click(function () {
+      var $btn = $(this);
+      
+      // Desabilita o botão imediatamente
+      $btn.prop('disabled', true);
+      
+      // Adiciona a classe de carregamento (rotação)
+      $btn.addClass("onclic");
+  
+      // Após 2080ms, executa a sequência de validação
       setTimeout(function () {
-        $btn.removeClass("validate");
-      }, 2250);
-    }, 2250);
-  });
+        $btn.removeClass("onclic");
+        $btn.addClass("validate");
+        window.location.href = "finish.html";
+  
+        // Após mais 2080ms, volta ao estado original e reabilita
+        setTimeout(function () {
+          $btn.removeClass("validate");
+          $btn.prop('disabled', false);
+        }, 2080);
+      }, 2080);
+    });
 });
 
 // Carrinho configuration
