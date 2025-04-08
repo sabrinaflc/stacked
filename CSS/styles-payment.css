@@ -7,6 +7,20 @@
     box-sizing: border-box;
 }
 
+#preloader{
+    background: #ffffff url('../assets/burger-loader.gif') no-repeat center center; /* Image source: Pavel Maček */
+    background-size: 55%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo img {
     max-width: 200px;
     width: 100%;

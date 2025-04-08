@@ -31,7 +31,7 @@ $(function () {
       setTimeout(function () {
         $btn.removeClass("onclic");
         $btn.addClass("validate");
-        window.location.href = "finish.html";
+        window.location.href = "payment.html";
   
         // Após mais 2080ms, volta ao estado original e reabilita
         setTimeout(function () {
