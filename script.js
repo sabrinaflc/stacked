@@ -88,7 +88,7 @@ function displayCartItems() {
                 <th>Item</th>
                 <th>Quantidade</th>
                 <th>Preço Unitário</th>
-                <th>                                 </th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
@@ -112,7 +112,7 @@ function displayCartItems() {
     
     const totalRow = document.createElement('tr');
     totalRow.innerHTML = `
-        <td colspan="3">Total</td>
+        <td colspan="2">Total</td>
         <td>R$ ${grandTotal.toFixed(2).replace('.', ',')}</td>
         <td></td>
     `;
