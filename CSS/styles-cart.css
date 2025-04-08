@@ -58,6 +58,17 @@ nav ul li a {
     font-weight: regular;
 }
 
+#c:hover,
+#a:hover,
+#ac:hover,
+#b:hover,
+#s:hover{
+    width: 80%;
+    height: 300px;
+    color: #E57200;
+    border-radius: 20px;
+}
+
 .cart-icon {
     font-size: 34px;
 }
