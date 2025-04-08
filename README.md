@@ -16,4 +16,4 @@ Este projeto foi criado para oferecer aos clientes uma experiência digital mode
 - **CSS3** – Estilização visual.
 - **JavaScript** – Funcionalidades interativas (ex: controle de quantidades, navegação entre categorias e botões).
 
-Feito com ❤️ por amantes de hambúrgueres e código.
+Feito com ❤️ por quem ama hambúrguer e código.
