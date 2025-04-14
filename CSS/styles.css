@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +23,8 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
   
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 .logo img {
     max-width: 200px;
     width: 100%;
@@ -92,14 +91,6 @@ nav ul li a {
     font-size: 34px;
 }
 
-/* main {
-    width: 80%;
-    background: ##f4f4f4;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-} */
-
 #c:hover,
 #a:hover,
 #ac:hover,
@@ -111,9 +102,30 @@ nav ul li a {
     border-radius: 20px;
 }
 
-
 iframe{
     display: none;
+}
+
+/* Animação de entrada */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação nos cards */
+.item {
+    animation: fadeUp 0.4s ease forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* ITEM COMBO CHEDDAR */
@@ -146,21 +158,7 @@ iframe{
     box-sizing: border-box;
 }
 
-/* Responsivo - tablets */
-@media (max-width: 1024px) {
-    .item {
-        width: calc(50% - 30px);
-    }
-}
-
-/* Responsivo - celular */
-@media (max-width: 600px) {
-    .item {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
+/* here*/
 .item img {
     width: 100%;
     border-radius: 10px;
@@ -219,30 +217,24 @@ iframe{
 .btn-add {
     font-size: 18px;
 }
-/* Animação de entrada */
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+/* Responsivo - tablets */
+@media (max-width: 1024px) {
+    .item {
+        width: calc(50% - 30px);
     }
 }
 
-/* Animação nos cards */
-.item {
-    animation: fadeUp 0.8s ease forwards;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+/* Responsivo - celular */
+@media (max-width: 600px) {
+    .item {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 
 /* Botão pulsando levemente */
-.add-cart button {
+/* .add-cart button {
     animation: pulse 2s infinite;
     transition: background-color 0.3s;
 }
@@ -251,21 +243,4 @@ iframe{
     0% { transform: scale(1); }
     50% { transform: scale(1.03); }
     100% { transform: scale(1); }
-}
-
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #EAEAEA;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.header {
-    background-color: #000;
-    color: #FF6600;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
- */
+} */
