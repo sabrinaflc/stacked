@@ -32,14 +32,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Bebas Neue", sans-serif;
 }
 
-p{
+.orange{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-size: larger;
     font-style: normal;
-    color: #1e1e1e;
+    color: #E57200;
 }
 
 .title {
@@ -143,7 +144,7 @@ button#button {
     outline: none;
     height: 40px;
     text-align: center;
-    width: 190px;
+    width: 220px;
     border-radius: 40px;
     background: #fff;
     border: 2px solid #1ECD97;
@@ -288,3 +289,34 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-top: 15px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}

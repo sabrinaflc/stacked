@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/styles-payment.css">
     <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
     <title>STACKED | PAGAMENTO</title>
@@ -31,9 +32,61 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
             </nav>
-            <div class="cart-icon">🛒</div>
+            <div class="cart-icon" onclick="window.location.href='cart.html'">🛒</div>
         </header>
         
-        <br><h1 class="title">PAGAMENTO</h1>
+        <br><h1 class="title">PAGAMENTO</h1><br>
+
+        <form action="/submit" method="post">
+        
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+        
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+        
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+        
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required><br>
+
+            <br><h class="orange">Selecione uma forma de pagamento:</h>
+        
+              <select id="pagamento" name="pagamento" required>
+              <option value="">Selecione</option>
+              <option value="cartao_credito">Cartão de Crédito</option>
+              <option value="pix">Pix</option>
+                </select>
+        
+              <div id="cartao-info" style="display:none;">
+              <label for="numero_cartao">Número do Cartão:</label>
+              <input type="text" placeholder="1234 1234 1234 1234" required maxlength="19" id="numero_cartao" name="numero_cartao" maxlength="16">
+        
+              <label for="validade">Validade:</label>
+              <input type="month" placeholder="MM/AAAA" maxlength="7" id="validade" name="validade">
+        
+              <label for="cvv">CVV:</label>
+              <input type="text" placeholder="123" id="cvv" name="cvv" maxlength="3">
+            </div>
+
+          </form>
+
+        <div class="container-btn">
+            <button onclick="window.location.href='resumo.html'" id="button"></button>
+        </div>
+    
+        <script>
+            const pagamento = document.getElementById('pagamento');
+            const cartaoInfo = document.getElementById('cartao-info');
+        
+            pagamento.addEventListener('change', () => {
+              if (pagamento.value === 'cartao_credito') {
+                cartaoInfo.style.display = 'block';
+              } else {
+                cartaoInfo.style.display = 'none';
+              }
+            });
+          </script>
 </body>
 </html>

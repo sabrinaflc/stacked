@@ -37,8 +37,8 @@ $(function () {
         setTimeout(function () {
           $btn.removeClass("validate");
           $btn.prop('disabled', false);
-        }, 2080);
-      }, 2080);
+        }, 2090);
+      }, 2090);
     });
 });
 
