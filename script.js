@@ -164,3 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setupFinalizeButton();
     }
 });
+
+// Exemplo de item do carrinho
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function adicionarAoCarrinho(item) {
+    cart.push(item); // item pode ser um objeto com nome, preço, quantidade etc.
+    localStorage.setItem("cart", JSON.stringify(cart));
+}

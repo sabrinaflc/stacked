@@ -10,10 +10,9 @@
 </head>
 <body>
 
-    <div id='preloader'></div>
+    <!-- <div id='preloader'></div> -->
     
         <header>
-            <h1>hello world</h1>
             <a href="index.html" class="logo">
                 <img src="assets/STACKED.png" alt="Logo">
             </a>
@@ -30,11 +29,59 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=EBVmEPKOUXAoN_xb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
             </nav>
             <div class="cart-icon">🛒</div>
         </header>
         
-        <br><h1 class="title">PAGAMENTO</h1>
+        <br><h1 class="title">RESUMO DO PEDIDO</h1>
+
+        <div class="resumo-container">
+            <!-- Os itens do carrinho serão exibidos aqui -->
+        </div>
+
+        <div class="container-btn2">
+            <button onclick="window.location.href='index.html'" id="button"></button>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".resumo-container");
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            if (cartItems.length === 0) {
+                container.innerHTML = "<p>O carrinho está vazio.</p>";
+                return;
+            }
+
+            let totalGeral = 0;
+
+            cartItems.forEach(item => {
+                totalGeral += item.total;
+
+                const itemDiv = document.createElement("div");
+                itemDiv.className = "resumo-item";
+                itemDiv.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>Quantidade: ${item.quantity}</p>
+                    <p>Preço unitário: R$ ${item.price.toFixed(2).replace('.', ',')}</p>
+                    <p>Total: R$ ${item.total.toFixed(2).replace('.', ',')}</p>
+                `;
+                container.appendChild(itemDiv);
+            });
+
+            const totalDiv = document.createElement("div");
+            totalDiv.className = "total";
+            totalDiv.innerHTML = `<p>Total Geral: R$ ${totalGeral.toFixed(2).replace('.', ',')}</p>`;
+            container.appendChild(totalDiv);
+        });
+    </script>
+
+
+
 </body>
 </html>

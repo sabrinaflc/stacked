@@ -51,6 +51,15 @@
         <div class="highlight"></div>
     </main>
     <!-- <script src="script.js"></script> -->
+     <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function adicionarAoCarrinho(item) {
+            cart.push(item); // item pode ser um objeto com nome, preço, quantidade etc.
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+     </script>
 </body>
 
 </html>
