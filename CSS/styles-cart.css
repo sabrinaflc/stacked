@@ -185,10 +185,10 @@ button#button.validate {
     background: #fa8b0d;
 }
 
-/* button#button.validate:after {
+button#button.validate:after {
     font-family: "FontAwesome";
     content: "✔";
-} */
+}
 
 @keyframes rotating {
     from {
@@ -248,7 +248,7 @@ td {
 
 /* Linhas alternadas para melhor legibilidade */
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
 }
 
 /* Hover nas linhas */
