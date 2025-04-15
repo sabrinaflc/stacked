@@ -183,3 +183,7 @@ function alterarQuantidade(valor, id) {
   function adicionarAoCarrinho() {
     localStorage.removeItem("carrinho");
 }
+
+function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+}

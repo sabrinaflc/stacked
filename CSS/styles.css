@@ -7,8 +7,8 @@
     font-family: Arial, sans-serif;
 }
 
-#preloader{
-    background: #ffffff url('../assets/burger-loader.gif') no-repeat center center; /* Image source: Pavel Maček */
+#preloader {
+    background: #ffffff url('../assets/burger-loader.gif') no-repeat center center;
     background-size: 55%;
     position: fixed;
     top: 0;
@@ -24,18 +24,19 @@
 html {
     scroll-behavior: smooth;
 }
-  
-.logo img {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-}
 
 body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 100px;
+}
+
+.logo img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .poppins-regular {
@@ -57,11 +58,6 @@ header {
     padding: 20px 10%;
 }
 
-/* Espaço reservado para o conteúdo não ficar escondido */
-body {
-    padding-top: 100px; /* ajuste conforme a altura do header */
-}
-
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -71,6 +67,12 @@ body {
 .logo span {
     font-size: 14px;
     display: block;
+}
+
+/* --- Navegação --- */
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -84,9 +86,18 @@ nav ul li a {
     font-size: small;
     text-decoration: none;
     color: #333;
-    font-weight: regular;
+    font-weight: 400;
 }
 
+/* --- Ícone de menu (hambúrguer) --- */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Cart Icon */
 .cart-icon {
     font-size: 34px;
 }
@@ -95,18 +106,17 @@ nav ul li a {
 #a:hover,
 #ac:hover,
 #b:hover,
-#s:hover{
+#s:hover {
     width: 80%;
     height: 300px;
     color: #E57200;
     border-radius: 20px;
 }
 
-iframe{
+iframe {
     display: none;
 }
 
-/* Animação de entrada */
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -118,21 +128,21 @@ iframe{
     }
 }
 
-/* Animação nos cards */
 .item {
     animation: fadeUp 0.4s ease forwards;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .item:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* ITEM COMBO CHEDDAR */
 .menu-container {
     width: 80%;
     margin: 20px auto;
 }
+
 .menu-title {
     background-color: #E57200;
     color: white;
@@ -141,12 +151,14 @@ iframe{
     font-size: 20px;
     border-radius: 5px;
 }
+
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
+
 .item {
     background: white;
     border-radius: 10px;
@@ -158,28 +170,32 @@ iframe{
     box-sizing: border-box;
 }
 
-/* here*/
 .item img {
     width: 100%;
     border-radius: 10px;
 }
+
 .item h3 {
     margin: 10px 0;
     color: #333;
 }
+
 .item p {
     color: #666;
 }
+
 .item .price {
     font-weight: bold;
     color: #FF6600;
 }
+
 .quantity-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
 }
+
 .quantity-controls button {
     background-color: #424241;
     color: white;
@@ -189,9 +205,11 @@ iframe{
     border-radius: 5px;
     width: 30px;
 }
+
 .quantity-controls button:hover {
     background-color: #E65C00;
 }
+
 .quantity {
     font-size: 18px;
 }
@@ -202,6 +220,7 @@ iframe{
     align-items: center;
     margin-top: 10px;
 }
+
 .add-cart button {
     background-color: #424241;
     color: white;
@@ -211,25 +230,52 @@ iframe{
     border-radius: 5px;
     width: 400px;
 }
+
 .add-cart button:hover {
     background-color: #E65C00;
 }
+
 .btn-add {
     font-size: 18px;
 }
 
-/* Responsivo - tablets */
-@media (max-width: 1024px) {
+/* Responsivo até 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-container {
+        width: 95%;
+    }
+
     .item {
         width: calc(50% - 30px);
     }
-}
 
-/* Responsivo - celular */
-@media (max-width: 600px) {
-    .item {
+    .add-cart button {
         width: 100%;
-        margin: 10px 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
 
