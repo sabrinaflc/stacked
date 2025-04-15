@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 #preloader{
     background: #ffffff url('../assets/burger-loader.gif') no-repeat center center; /* Image source: Pavel Maček */
     background-size: 55%;
@@ -204,4 +208,45 @@ button#button.validate:after {
   to {
       transform: rotate(360deg);
   }
+}
+
+/* Responsivo até 768px */
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+  
+    .menu-container {
+        width: 95%;
+    }
+
+    .item {
+        width: calc(50% - 30px);
+    }
+
+    .add-cart button {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }

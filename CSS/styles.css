@@ -25,6 +25,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #f4f4f4;
     display: flex;
