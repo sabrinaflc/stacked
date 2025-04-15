@@ -115,3 +115,8 @@ $(function () {
 document.addEventListener('DOMContentLoaded', function () {
     displayCartItems();
 });
+
+// NAV RESPONSIVA
+function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+}
