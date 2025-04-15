@@ -34,6 +34,14 @@ body {
     align-items: center;
 }
 
+h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    font-style: normal;
+    color: #1e1e1e;
+}
+
 p{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -139,7 +147,7 @@ th {
     text-align: center;
 }
 
-button#button {
+button#button-p {
     outline: none;
     height: 40px;
     text-align: center;
@@ -156,16 +164,16 @@ button#button {
     transition: all 0.25s ease;
 }
 
-button#button:hover {
+button#button-p:hover {
     color: white;
     background: #fa8b0d;
 }
 
-button#button:after {
+button#button-p:after {
     content: "PROSSEGUIR";
 }
 
-button#button.onclic {
+button#button-p.onclic {
     width: 40px;
     border-color: #bbbbbb;
     border-width: 3px;
@@ -174,18 +182,18 @@ button#button.onclic {
     animation: rotating 2s 0.25s linear infinite;
 }
 
-button#button.onclic:hover {
+button#button-p.onclic:hover {
     color: #fa8b0d;
     background: white;
 }
 
-button#button.validate {
+button#button-p.validate {
     font-size: 13px;
     color: white;
     background: #fa8b0d;
 }
 
-button#button.validate:after {
+button#button-p.validate:after {
     font-family: "FontAwesome";
     content: "✔";
 }

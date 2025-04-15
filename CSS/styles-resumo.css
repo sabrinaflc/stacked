@@ -119,14 +119,14 @@ iframe {
 }
 
 /* Botão Cancelar */
-.container-btn {
+.container-btn2 {
     position: relative; 
     margin: 20px auto;
     width: 170px;
     text-align: center;
 }
 
-button#button {
+button#button-c {
     outline: none;
     height: 40px;
     text-align: center;
@@ -143,20 +143,20 @@ button#button {
     transition: all 0.25s ease;
 }
 
-button#button:hover {
+button#button-c:hover {
     color: white;
     background: #cd1e1e;
 }
 
-button#button:active {
+button#button-c:active {
     letter-spacing: 2px;
 }
 
-button#button:after {
+/* button#button:after {
     content: "CANCELAR PEDIDO";
-}
+} */
 
-button#button.onclic {
+button#button-c.onclic {
     width: 40px;
     border-color: #bbbbbb;
     border-width: 3px;
@@ -165,18 +165,18 @@ button#button.onclic {
     animation: rotating 2s 0.25s linear infinite;
 }
 
-button#button.onclic:hover {
+button#button-c.onclic:hover {
     color: #cd1e1e;
     background: white;
 }
 
-button#button.validate {
+button#button-c.validate {
     font-size: 13px;
     color: white;
     background: #cd1e1e;
 }
 
-button#button.validate:after {
+button#button-c.validate:after {
     font-family: "FontAwesome";
     content: "✔";
 }
@@ -198,3 +198,4 @@ button#button.validate:after {
       transform: rotate(360deg);
   }
 }
+

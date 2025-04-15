@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/styles-cart.css">
     <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
     <title>STACKED | CARRINHO </title>
@@ -12,7 +11,7 @@
 
 <body>
 
-    <div id='preloader'></div>
+    <!-- <div id='preloader'></div> -->
 
     <header>
         <a href="index.html" class="logo">
@@ -43,7 +42,7 @@
     </div>
     
     <div class="container-btn">
-        <button id="button"></button>
+        <button id="button-p"></button>
     </div>
 
     <main>
@@ -58,6 +57,8 @@
             localStorage.setItem("cart", JSON.stringify(cart));
         }
      </script>
+     <script src="JS/cart.js"></script>
+     <script src="JS/script.js"></script>
 
 </body>
 

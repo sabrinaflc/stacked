@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/styles-resumo.css">
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
     <title>STACKED | RESUMO</title>
 </head>
@@ -41,40 +41,11 @@
         </div><br>
 
         <div class="container-btn2">
-            <button onclick="window.location.href='index.html'" id="button"></button>
+            <button onclick="finalizarPedido()" id="button-c">CANCELAR PEDIDO</button>
         </div>
+          
+    <script src="JS/script.js"></script>
+    <script src="JS/resumo.js"></script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector(".resumo-container");
-            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-            if (cartItems.length === 0) {
-                container.innerHTML = "<p>O carrinho está vazio.</p>";
-                return;
-            }
-
-            let totalGeral = 0;
-
-            cartItems.forEach(item => {
-                totalGeral += item.total;
-
-                const itemDiv = document.createElement("div");
-                itemDiv.className = "resumo-item";
-                itemDiv.innerHTML = `
-                    <h3>${item.name}</h3>
-                    <p>Quantidade: ${item.quantity}</p>
-                    <p>Preço unitário: R$ ${item.price.toFixed(2).replace('.', ',')}</p>
-                    <p>Total: R$ ${item.total.toFixed(2).replace('.', ',')}</p>
-                `;
-                container.appendChild(itemDiv);
-            });
-
-            const totalDiv = document.createElement("div");
-            totalDiv.className = "total";
-            totalDiv.innerHTML = `<p>Total Geral: R$ ${totalGeral.toFixed(2).replace('.', ',')}</p>`;
-            container.appendChild(totalDiv);
-        });
-    </script>
 </body>
 </html>
