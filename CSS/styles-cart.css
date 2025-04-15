@@ -95,6 +95,10 @@ nav ul li a {
     border-radius: 20px;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .cart-icon {
     font-size: 34px;
 }

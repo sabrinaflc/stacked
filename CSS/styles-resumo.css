@@ -76,6 +76,10 @@ nav ul li a {
     font-weight: regular;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .cart-icon {
     font-size: 34px;
 }
